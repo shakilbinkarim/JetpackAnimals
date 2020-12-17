@@ -12,6 +12,7 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.bumptech.glide.request.target.CustomTarget
 import com.bumptech.glide.request.transition.Transition
+import com.google.android.material.imageview.ShapeableImageView
 import io.github.shakilbinkarim.jetpackanimals.R
 
 fun getProgressDrawable(context: Context) = CircularProgressDrawable(context).apply {
@@ -28,6 +29,11 @@ fun ImageView.loadImage(uri: String?, progressDrawable: CircularProgressDrawable
         .setDefaultRequestOptions(options)
         .load(uri)
         .into(this)
+}
+
+@BindingAdapter("android:imageUrl")
+fun loadImage(view: ShapeableImageView, url: String?){
+    view.loadImage(url, getProgressDrawable(view.context))
 }
 
 @BindingAdapter("android:imageUrl")

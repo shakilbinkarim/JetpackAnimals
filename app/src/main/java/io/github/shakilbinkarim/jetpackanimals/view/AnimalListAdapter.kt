@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import io.github.shakilbinkarim.jetpackanimals.R
+import io.github.shakilbinkarim.jetpackanimals.databinding.ItemAnimalBinding
 import io.github.shakilbinkarim.jetpackanimals.model.Animal
 import io.github.shakilbinkarim.jetpackanimals.utils.getProgressDrawable
 import io.github.shakilbinkarim.jetpackanimals.utils.loadImage
@@ -13,6 +14,8 @@ import kotlinx.android.synthetic.main.item_animal.view.*
 
 class AnimalListAdapter(private val animalList: ArrayList<Animal>) :
     RecyclerView.Adapter<AnimalListAdapter.AnimalListViewHolder>() {
+
+    private lateinit var binding : ItemAnimalBinding
 
     fun updateAnimalList(newAnimalList: List<Animal>) {
         animalList.clear()
