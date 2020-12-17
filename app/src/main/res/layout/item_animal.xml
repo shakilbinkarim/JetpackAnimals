@@ -7,10 +7,15 @@
         <variable
             name="animal"
             type="io.github.shakilbinkarim.jetpackanimals.model.Animal" />
+        <variable
+            name="clickListener"
+            type="io.github.shakilbinkarim.jetpackanimals.view.AnimalClickListener" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/cl_animal_item"
+        android:onClick="@{clickListener::onClick}"
+        android:tag="@{animal.name}"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
