@@ -18,13 +18,19 @@ class AnimalListAdapter(private val animalList: ArrayList<Animal>) :
     private var map: HashMap<String, Int> = HashMap()
 
     fun updateAnimalList(newAnimalList: List<Animal>) {
-        animalList.clear()
-        animalList.addAll(newAnimalList)
-        map.clear()
-        animalList.forEachIndexed { index, element ->
-            element.name?.let { map[it] = index }
-        }
+        setupDataStructures(newAnimalList)
         notifyDataSetChanged()
+    }
+
+    private fun setupDataStructures(newAnimalList: List<Animal>) {
+        animalList.clear()
+        map.clear()
+        newAnimalList.forEachIndexed { index, animal ->
+            animal.name?.let {
+                map[it] = index
+                animalList.add(animal)
+            }
+        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AnimalListViewHolder {
