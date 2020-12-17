@@ -52,4 +52,3 @@ fun setUpBackgroundColor(view: LinearLayout, url: String?) {
             }
         })
 }
-

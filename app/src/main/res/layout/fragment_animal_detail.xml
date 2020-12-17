@@ -10,7 +10,6 @@
     </data>
 
     <LinearLayout
-        android:id="@+id/ll_animal_detail"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center_horizontal"
@@ -27,7 +26,6 @@
             android:scaleType="center" />
 
         <TextView
-            android:id="@+id/tv_animal_name"
             style="@style/Title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -35,7 +33,6 @@
             android:layout_margin="4dp" />
 
         <TextView
-            android:id="@+id/tv_animal_location"
             style="@style/NormalText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -43,7 +40,6 @@
             android:layout_margin="4dp" />
 
         <TextView
-            android:id="@+id/tv_animal_lifespan"
             style="@style/NormalText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -51,7 +47,6 @@
             android:layout_margin="4dp" />
 
         <TextView
-            android:id="@+id/tv_animal_diet"
             style="@style/NormalText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -59,4 +54,5 @@
             android:layout_margin="4dp" />
 
     </LinearLayout>
+
 </layout>
